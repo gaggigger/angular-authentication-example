@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My App</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <!-- your app's css -->
+    <link href="css/app.css" rel="stylesheet">
+  </head>
+
+  <!-- 'snappy' is the name of this angular module (js/app.js)-->
+  <body ng-cloak ng-app="app" ng-controller="MainCtrl">
+
+    <button class='button' ng-if='isLoggedIn()' ng-click="logoutUser()">Logout</button>
+
+    <ng-view></ng-view>
+
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+
+    <!-- your app's script -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/auth/auth.js"></script>
+    <script src="js/app/pets/pets.js"></script>
+    <script src="js/app/pets/pet/pet.js"></script>
+    <script src="js/app/login/login.js"></script>
+  </body>
+</html>
