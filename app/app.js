@@ -1,7 +1,5 @@
 angular.module('app', [
-    'ionic',
     'ngRoute',
-    'ngAnimate',
 
     // Top level modules only
     'auth',
@@ -14,7 +12,7 @@ angular.module('app', [
 
         $routeProvider
             .when('/login', {
-                templateUrl: 'js/app/login/login.tpl.html',
+                templateUrl: 'app/login/login.tpl.html',
                 controller: 'LoginCtrl',
 
                 // You do not need to be logged in to go to this route.
@@ -22,7 +20,7 @@ angular.module('app', [
             })
 
             .when('/pets', {
-                templateUrl: 'js/app/pets/pets.tpl.html',
+                templateUrl: 'app/pets/pets.tpl.html',
                 controller: 'PetsCtrl',
 
                 // You must be logged into go to this route.
@@ -30,7 +28,7 @@ angular.module('app', [
             })
 
             .when('/pet/:petId', {
-                templateUrl: 'js/app/pets/pet/pet.tpl.html',
+                templateUrl: 'app/pets/pet/pet.tpl.html',
                 controller: 'PetCtrl',
                 requireLogin: true
             });
